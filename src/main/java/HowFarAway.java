@@ -8,16 +8,20 @@ public class HowFarAway
 
       //Gathering input for computing
       Scanner input = new Scanner(System.in); 
+      System.out.println("Enter the latitude of the starting location: ");
       double startLat = input.nextDouble();
+      System.out.println("Enter the longitude of the starting location: ");
       double startLong = input.nextDouble();
+      System.out.println("Enter the latitude of the ending location: ");
       double endLat = input.nextDouble();
+      System.out.println("Enter the longitude of the ending location: ");
       double endLong = input.nextDouble();
 
       //geolocating stuff
       GeoLocation start = new GeoLocation(startLat, startLong);
       GeoLocation end = new GeoLocation(endLat, endLong);
       double distance = start.distanceFrom(end);
-      System.out.print(distance);
+      System.out.print("The distance is " + distance + " miles.");
 
     }
 }

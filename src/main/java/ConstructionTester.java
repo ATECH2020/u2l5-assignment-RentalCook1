@@ -6,14 +6,17 @@ public class ConstructionTester
     {
       //gathering ints
       Scanner input = new Scanner(System.in); 
-      int taxRate = input.nextInt();
+      System.out.println("Enter the sales tax rate: ");
+      double taxRate = input.nextDouble();
+      System.out.println("How many boards do you need? ");
       int boardNum = input.nextInt();
-      double windowNum = input.nextDouble();
+      System.out.println("How many windows do you need? ");
+      int windowNum = input.nextInt();
 
        Construction house = new  Construction(8, 11, taxRate);
        double total =(house.lumberCost(boardNum) + house.windowCost(windowNum));
-       System.out.println(total);
-       System.out.print(house.grandTotal(total));
+       System.out.println("Total: " + total);
+       System.out.print("Grand Total: " + house.grandTotal(total));
        
 
 
